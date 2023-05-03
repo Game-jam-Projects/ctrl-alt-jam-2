@@ -21,8 +21,8 @@ public class ChangeResolution : MonoBehaviour, IMoveHandler
                 {
                     screenResolution.selectedResolution = 0;
                 }
-                screenResolution.UpdateRestLabel();
-                screenResolution.ApplyGraphics();
+               // screenResolution.UpdateRestLabel();
+                //screenResolution.ApplyGraphics();
               
 
                 break;
@@ -32,8 +32,8 @@ public class ChangeResolution : MonoBehaviour, IMoveHandler
                 {
                     screenResolution.selectedResolution = screenResolution.resolutions.Count -1;
                 }
-                screenResolution.UpdateRestLabel();
-                screenResolution.ApplyGraphics();
+              //  screenResolution.UpdateRestLabel();
+               // screenResolution.ApplyGraphics();
 
                 break;
             case MoveDirection.None:

@@ -27,20 +27,20 @@ using UnityEngine.UI;
 
         void Start()
         {
-            Application.targetFrameRate = GameManager.Instance.fpsGame;
+            Application.targetFrameRate = GameManagerJean.Instance.fpsGame;
 
           // Resolution[] resolutions = Screen.resolutions;
-            if(CanvasController.Instance.m_toogle_Screen != null)
-            {
-                CanvasController.Instance.m_toogle_Screen.isOn = Screen.fullScreen;
-            }
+            //if(CanvasController.Instance.m_toogle_Screen != null)
+            //{
+            //    CanvasController.Instance.m_toogle_Screen.isOn = Screen.fullScreen;
+            //}
 
             for( int i = 0; i < resolutions.Count; i++)
         {
             if(Screen.width == resolutions[i].horizontal && Screen.height == resolutions[i].vertical)
             {
                 selectedResolution = i;
-                UpdateRestLabel();
+               // UpdateRestLabel();
             }
         }
         // pick max resolution for full size
@@ -65,7 +65,7 @@ using UnityEngine.UI;
 
                     // then fix it
                     Screen.SetResolution(maxWidth, maxHeight, true);
-                    CanvasController.Instance.m_toogle_Screen.isOn = true;
+                   // CanvasController.Instance.m_toogle_Screen.isOn = true;
                 }
                 //            Debug.Log("---------------- full screen ---------------");
             }
@@ -82,7 +82,7 @@ using UnityEngine.UI;
                     {
                         windowedFixed = true;
                         Screen.SetResolution(windowedWidth, windowedHeight, false);
-                        CanvasController.Instance.m_toogle_Screen.isOn = false;
+                       // CanvasController.Instance.m_toogle_Screen.isOn = false;
                         //                    Debug.Log("FixWindowed res " + windowedWidth + "," + windowedHeight);
                     }
                 }
@@ -102,49 +102,49 @@ using UnityEngine.UI;
     #region UI funcion
 
 
-    public void UpdateRestLabel()
-    {
-        CanvasController.Instance.resolutionLabel.text = resolutions[selectedResolution].horizontal.ToString() + " X " +
-            resolutions[selectedResolution].vertical.ToString();
-    }
-    public void ApplyGraphics()
-    {
-        // Screen.fullScreen = CanvasController.Instance.m_toogle_Scrren.isOn;
+    //public void UpdateRestLabel()
+    //{
+    //    CanvasController.Instance.resolutionLabel.text = resolutions[selectedResolution].horizontal.ToString() + " X " +
+    //        resolutions[selectedResolution].vertical.ToString();
+    //}
+    //public void ApplyGraphics()
+    //{
+    //    // Screen.fullScreen = CanvasController.Instance.m_toogle_Scrren.isOn;
      
-        Screen.SetResolution(resolutions[selectedResolution].horizontal,
-            resolutions[selectedResolution].vertical, CanvasController.Instance.m_toogle_Screen.isOn);
+    //    Screen.SetResolution(resolutions[selectedResolution].horizontal,
+    //        resolutions[selectedResolution].vertical, CanvasController.Instance.m_toogle_Screen.isOn);
 
-        maxWidth = resolutions[selectedResolution].horizontal;
-        maxHeight = resolutions[selectedResolution].vertical;
+    //    maxWidth = resolutions[selectedResolution].horizontal;
+    //    maxHeight = resolutions[selectedResolution].vertical;
 
-        //verificar se vamos manter a resolução de janela igual atual
-        windowedWidth = resolutions[selectedResolution].horizontal;
-        windowedHeight = resolutions[selectedResolution].vertical;
+    //    //verificar se vamos manter a resolução de janela igual atual
+    //    windowedWidth = resolutions[selectedResolution].horizontal;
+    //    windowedHeight = resolutions[selectedResolution].vertical;
 
-    }
+    //}
 
-    public void SetFullScreen()
-    {
+    //public void SetFullScreen()
+    //{
       
-        if (CanvasController.Instance.m_toogle_Screen.isOn== true)
-        {
+    //    if (CanvasController.Instance.m_toogle_Screen.isOn== true)
+    //    {
            
-            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+    //        Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
 
-           Screen.SetResolution(resolutions[selectedResolution].horizontal,
-            resolutions[selectedResolution].vertical, true);
+    //       Screen.SetResolution(resolutions[selectedResolution].horizontal,
+    //        resolutions[selectedResolution].vertical, true);
 
-            GameManager.Instance.isFullScreen = Screen.fullScreen;
+    //        GameManager.Instance.isFullScreen = Screen.fullScreen;
 
-        }
-        else if (CanvasController.Instance.m_toogle_Screen.isOn == false)
-        {
-            Screen.fullScreenMode = FullScreenMode.Windowed;
+    //    }
+    //    else if (CanvasController.Instance.m_toogle_Screen.isOn == false)
+    //    {
+    //        Screen.fullScreenMode = FullScreenMode.Windowed;
     
-            Screen.SetResolution(windowedWidth, windowedHeight, false);
-            GameManager.Instance.isFullScreen = Screen.fullScreen;
-        }
-    }
+    //        Screen.SetResolution(windowedWidth, windowedHeight, false);
+    //        GameManager.Instance.isFullScreen = Screen.fullScreen;
+    //    }
+    //}
 
     #endregion
 

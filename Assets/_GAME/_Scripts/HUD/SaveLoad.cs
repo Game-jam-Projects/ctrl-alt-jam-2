@@ -39,7 +39,7 @@ public class SaveLoad :MonoBehaviour
         data.MusicVolumeSave = AudioManager.Instance.maxMusicVolume;
         data.SfxVolumeSave = AudioManager.Instance.maxSfxVolume;
 
-        data.fps = GameManager.Instance.fpsGame;
+        data.fps = GameManagerJean.Instance.fpsGame;
 
         bf.Serialize(file, data);
         file.Close();
@@ -56,7 +56,7 @@ public class SaveLoad :MonoBehaviour
             GameData data = (GameData)bf.Deserialize(file);
             file.Close();
 
-            GameManager.Instance.fpsGame = data.fps;
+            GameManagerJean.Instance.fpsGame = data.fps;
 
             AudioManager.Instance.maxMasterVolume = data.MasterVolumeSave;
             AudioManager.Instance.maxMusicVolume = data.MusicVolumeSave;
