@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1066f305362f0441ac509c5f787f7e2, type: 3}
+  m_Name: ChangePainelButton
+  m_EditorClassIdentifier: 
+  buttonIcons:
+  - name: teste
+    buttonName: teste
+    keyboardIcon: {fileID: 21300000, guid: ea4e2fbd70b7dc54aa5314756b953da2, type: 3}
+    ps4Icon: {fileID: 21300000, guid: 2da2d15ce082e12448ac493c55a33f0f, type: 3}
+    xboxIcon: {fileID: 21300000, guid: f609c9b3b1675f947a865ec558b5ad90, type: 3}
+    switchIcon: {fileID: 21300000, guid: 243ad1fe326bf5e4e8afbcc56f2d1b43, type: 3}
+  - name: 2
+    buttonName: 2
+    keyboardIcon: {fileID: 21300000, guid: 3492e9eb6292141eb942d0c9beface29, type: 3}
+    ps4Icon: {fileID: 21300000, guid: 2da2d15ce082e12448ac493c55a33f0f, type: 3}
+    xboxIcon: {fileID: 21300000, guid: f609c9b3b1675f947a865ec558b5ad90, type: 3}
+    switchIcon: {fileID: 21300000, guid: 243ad1fe326bf5e4e8afbcc56f2d1b43, type: 3}
+  - name: controles
+    buttonName: controles
+    keyboardIcon: {fileID: 21300000, guid: d2b7d50a0c97b8943a74416daf4117f2, type: 3}
+    ps4Icon: {fileID: 21300000, guid: cbffd5465853d0d4ba90d27e08c3dc20, type: 3}
+    xboxIcon: {fileID: 21300000, guid: b8be0b22698f613478147c1e8b8af6b0, type: 3}
+    switchIcon: {fileID: 21300000, guid: c1b6820812e315b4fa4a26b98d951137, type: 3}
