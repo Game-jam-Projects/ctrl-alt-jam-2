@@ -30,13 +30,14 @@ public class GameManager : Singleton<GameManager>
     {
         Paused = true;
         Time.timeScale = 0;
-        OnPauseStatusChange?.Invoke(Paused);
+       OnPauseStatusChange?.Invoke(Paused);
     }
 
     public void ResumeGame()
     {
         Paused = false;
         Time.timeScale = 1;
+      
         OnPauseStatusChange?.Invoke(Paused);
     }
 

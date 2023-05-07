@@ -22,12 +22,12 @@ public class UIGameplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dieByDamageMessageText;
 
     private HealthSystem healthSystem;
-   // private PlayerController playerController;
+    private PlayerController playerController;
 
     private void Awake()
     {
-        //playerController = FindObjectOfType<PlayerController>();
-     //   healthSystem = playerController.GetComponent<HealthSystem>();
+      playerController = FindObjectOfType<PlayerController>();
+      healthSystem = playerController.GetComponent<HealthSystem>();
     }
 
     private void Start()
@@ -64,10 +64,13 @@ public class UIGameplay : MonoBehaviour
 
     private void UpdatePauseMenu(bool value)
     {
-        DisableAllMenus();
+        //DisableAllMenus();
+   
+        CanvasController.Instance.SetSelectedButton(CanvasController.Instance.buttonCurrent);
+        CanvasController.Instance.painelMenuPrincipal.SetActive(value);
 
-        firstButtonPause.Select();
-        pausePanel.SetActive(value);
+        //firstButtonPause.Select();
+        //pausePanel.SetActive(value);
     }
 
     private void OpenGameoverMenu(bool dieByTime)

@@ -32,7 +32,7 @@ public partial class @PlayerControllerAction: IInputActionCollection2, IDisposab
                     ""type"": ""Value"",
                     ""id"": ""45ea229d-d405-4caf-ab09-ceed676408b2"",
                     ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
+                    ""processors"": ""NormalizeVector2"",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
@@ -212,7 +212,7 @@ public partial class @PlayerControllerAction: IInputActionCollection2, IDisposab
                 {
                     ""name"": """",
                     ""id"": ""a34d9880-92ab-4eb6-872c-8680b3c363ff"",
-                    ""path"": ""<Keyboard>/enter"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""teclado e  mouse"",
@@ -245,7 +245,7 @@ public partial class @PlayerControllerAction: IInputActionCollection2, IDisposab
                 {
                     ""name"": ""WSAD"",
                     ""id"": ""a78ddb58-5f70-4b82-b129-40d26b01ff8d"",
-                    ""path"": ""2DVector(mode=1)"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -290,6 +290,61 @@ public partial class @PlayerControllerAction: IInputActionCollection2, IDisposab
                     ""name"": ""right"",
                     ""id"": ""e647ce20-3dd8-4c94-99f3-e9d64f063bd8"",
                     ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""teclado e  mouse"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Seta"",
+                    ""id"": ""c629b58a-9632-4950-9354-d0aba9c9c21e"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""a1d071f9-deb9-4491-9e51-ebdfa3afc81d"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""teclado e  mouse"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""47066b0a-25f6-4ec4-8918-cac6fdffd9a4"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""teclado e  mouse"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""67f861e7-91d7-4e86-a67d-d0b5be5ca695"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""teclado e  mouse"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""b6970ae6-099d-4d69-b24d-7243dfbaacee"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""teclado e  mouse"",
